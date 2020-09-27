@@ -37,10 +37,7 @@ CLASS ZCL_ABAPGIT_CONVERT IMPLEMENTATION.
           EXPORTING data = iv_string
           IMPORTING buffer = rv_xstring ).
 
-      CATCH cx_parameter_invalid_range
-            cx_sy_codepage_converter_init
-            cx_sy_conversion_codepage
-            cx_parameter_invalid_type.                  "#EC NO_HANDLER
+      CATCH cx_cx_root.                  "#EC NO_HANDLER
     ENDTRY.
 
   ENDMETHOD.
@@ -60,10 +57,7 @@ CLASS ZCL_ABAPGIT_CONVERT IMPLEMENTATION.
           IMPORTING
             data  = rv_string ).
 
-      CATCH cx_parameter_invalid_range
-            cx_sy_codepage_converter_init
-            cx_sy_conversion_codepage
-            cx_parameter_invalid_type.                  "#EC NO_HANDLER
+      CATCH cx_root.                  "#EC NO_HANDLER
     ENDTRY.
 
   ENDMETHOD.
