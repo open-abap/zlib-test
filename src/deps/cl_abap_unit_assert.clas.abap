@@ -17,6 +17,6 @@ CLASS cl_abap_unit_assert IMPLEMENTATION.
     ASSERT act = exp.
   ENDMETHOD.
   METHOD assert_not_initial.
-    " todo
+    ASSERT NOT act IS INITIAL.
   ENDMETHOD.
 ENDCLASS.
