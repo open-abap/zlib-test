@@ -21,6 +21,8 @@ CLASS cl_abap_conv_in_ce IMPLEMENTATION.
     CREATE OBJECT ret.
   ENDMETHOD.
   METHOD convert.
-    ASSERT 'todo' = 2.
+    WRITE '@KERNEL let arr = new Uint8Array(input.get().match(/.{1,2}/g).map(byte => parseInt(byte, 16)));'.
+    WRITE '@KERNEL let res = new TextDecoder("utf-8").decode(arr);'.
+    WRITE '@KERNEL data.set(res);'.
   ENDMETHOD.
 ENDCLASS.
