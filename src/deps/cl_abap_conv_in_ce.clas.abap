@@ -1,22 +1,24 @@
 CLASS cl_abap_conv_in_ce DEFINITION PUBLIC.
   PUBLIC SECTION.
-    CLASS-METHODS:
+    CLASS-METHODS
       create
         IMPORTING
           encoding TYPE string
         RETURNING
-          VALUE(ret) TYPE REF TO cl_abap_conv_in_ce,
+          VALUE(ret) TYPE REF TO cl_abap_conv_in_ce.
+    METHODS
       convert
         IMPORTING
           input TYPE string
-          n TYPE i
+          n     TYPE i
         EXPORTING
-          data TYPE xstring.
+          data  TYPE xstring.
 ENDCLASS.
 
 CLASS cl_abap_conv_in_ce IMPLEMENTATION.
   METHOD create.
-    ASSERT 'todo' = 1.
+    ASSERT encoding = 'UTF-8'.
+    CREATE OBJECT ret.
   ENDMETHOD.
   METHOD convert.
     ASSERT 'todo' = 2.
