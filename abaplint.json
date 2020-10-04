@@ -9,6 +9,13 @@
     "version": "v702",
     "errorNamespace": "."
   },
+  "dependencies": [
+    {
+      "url": "https://github.com/open-abap/open-abap",
+      "folder": "/deps",
+      "files": "/src/**/*.*"
+    }
+  ],
   "rules": {
     "implement_methods": true,
     "indentation": true,
